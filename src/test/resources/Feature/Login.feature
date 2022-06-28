@@ -9,5 +9,7 @@ Feature: Login
     And I enter password as 'admin123'
     And I click on login
     Then I should get access to the portal with page content as 'My Info'
+    
+    
 
    
