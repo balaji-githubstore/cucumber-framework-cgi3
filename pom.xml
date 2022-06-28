@@ -3,6 +3,7 @@
 	<groupId>com.cgi</groupId>
 	<artifactId>OrangeAutomation</artifactId>
 	<version>1.0</version>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -25,6 +26,8 @@
 			<version>7.4.1</version>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
+
 
 </project>
