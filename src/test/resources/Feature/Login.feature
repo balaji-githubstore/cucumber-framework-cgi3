@@ -9,7 +9,11 @@ Feature: Login
     And I enter password as 'admin123'
     And I click on login
     Then I should get access to the portal with page content as 'My Info'
-    
-    
 
-   
+  Scenario: Invalid Credential
+    Given I have browser with orangehrm application
+    When I enter username as 'bala'
+    And I enter password as 'bala123'
+    And I click on login
+    Then I should get the error message as 'Invalid credentials'
+
