@@ -6,11 +6,15 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
-		features = { "src/test/resources/Feature/Login.feature" }
+		features = { "src/test/resources/Feature" }
 		, glue = {"com.cgi.steps","com.cgi.base" }
 		, monochrome = true
 		, publish = false
 		, plugin = {"html:target/cucumber-report.html"}
+		//, tags = "not (@valid or @invalid)"
+		, tags="@addemergencycontact"
+	    //, dryRun = true
+				
 		)
 
 @RunWith(Cucumber.class)
