@@ -12,7 +12,7 @@ Feature: Employee
     And I click on PIM
     And I click on Add Employee
     And I fill the employee details
-      | firstname | middelname | lastname | employee_id | profile_image | create_credential | username | password    | confirm_password | status   |
-      | john      | k          | ken      |         101 | emp_101       | true              | john12   | Welcome@123 | Welcome@123      | Disabled |
+      | firstname | middelname | lastname | employee_id | emp_image | check_create_credential | username | password    | confirm_password | status   |
+      | john      | k          | ken      |         101 | emp_101   | true                    | john12   | Welcome@123 | Welcome@123      | Disabled |
     And I click on save employee record
     Then I should get the added employee record under personal details
