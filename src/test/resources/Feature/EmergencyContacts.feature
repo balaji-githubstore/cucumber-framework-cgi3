@@ -18,8 +18,8 @@ Feature: Emergency Contact
       | <name>      | <relationship> | <hometel>     | <mobile> | <worktel>     |
     And I click on save
     Then I should get the added recorded
-
+    
     Examples: 
-      | username | password | name  | relationship | hometel  | mobile    | worktel |
-      | Admin    | admin123 | sat   | brother      | 78787887 | 875455454 |  545454 |
-      | Admin    | admin123 | peter | father       |      988 |       977 |     966 |
+      | username | password | name   | relationship | hometel   | mobile    | worktel |
+      | Admin    | admin123 | john12 | brother      | $78787887 | 875455454 |  545454 |
+      #| Admin    | admin123 | peter | father       |      988 |       977 |     966 |

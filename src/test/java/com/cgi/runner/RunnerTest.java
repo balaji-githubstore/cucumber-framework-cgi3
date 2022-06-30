@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 		, plugin = {"html:target/cucumber-report.html"}
 		//, tags = "not (@valid or @invalid)"
 		, tags="@addemergencycontact"
-	    //, dryRun = true
+//	    , dryRun = true
 				
 		)
 

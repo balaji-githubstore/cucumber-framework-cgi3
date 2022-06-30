@@ -3,6 +3,7 @@ package com.cgi.steps;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import com.cgi.base.AutomationHooks;
@@ -12,6 +13,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class EmergencyContactsSteps {
+	
+	private static DataTable emergencyContact_dt;
 
 	@When("I click on My Info")
 	public void i_click_on_my_info() {
@@ -31,7 +34,8 @@ public class EmergencyContactsSteps {
 
 	@When("I fill the form")
 	public void i_fill_the_form(DataTable dataTable) {
-
+		
+		emergencyContact_dt=dataTable;
 		List<Map<String, String>> list = dataTable.asMaps();
 		System.out.println(list);
 
@@ -57,8 +61,17 @@ public class EmergencyContactsSteps {
 
 	@Then("I should get the added recorded")
 	public void i_should_get_the_added_recorded() {
+		
+		//expected contact details
+		List<Map<String, String>> list = emergencyContact_dt.asMaps();
+		String cName=list.get(0).get("contactname");
 
-		//verify added contact name
+		//actual table record in webpage
+		String actualValue=AutomationHooks.driver.findElement(By.xpath("//table[@id='emgcontact_list']")).getText();
+	
+		Assert.assertTrue(actualValue.contains(cName)); //it should be true
+		Assert.assertTrue(actualValue.contains(list.get(0).get("relationship")));
+		Assert.assertTrue("Assertion on home telephone name",actualValue.contains(list.get(0).get("hometelephone")));
 	}
 
 }
