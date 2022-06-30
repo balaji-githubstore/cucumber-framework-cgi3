@@ -22,7 +22,7 @@ public class LoginSteps {
 
 		AutomationHooks.driver = new ChromeDriver();
 		AutomationHooks.driver.manage().window().maximize();
-		AutomationHooks.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+		AutomationHooks.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		AutomationHooks.driver.get("https://opensource-demo.orangehrmlive.com/");
 
 	}
