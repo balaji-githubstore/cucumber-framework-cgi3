@@ -16,3 +16,5 @@ Feature: Employee
       | john      | k          | ken      |      101454 | src/test/resources/Files/emp_101.PNG | true                    | john1267 | Welcome@123 | Welcome@123      | Disabled |
     And I click on save employee record
     Then I should get the added employee record under personal details
+
+ 
