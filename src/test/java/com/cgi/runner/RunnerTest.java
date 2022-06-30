@@ -12,8 +12,8 @@ import io.cucumber.junit.CucumberOptions;
 		, publish = false
 		, plugin = {"html:target/cucumber-report.html"}
 		//, tags = "not (@valid or @invalid)"
-		, tags="@addemergencycontact"
-//	    , dryRun = true
+		, tags="@employee"
+	    , dryRun = true
 				
 		)
 
