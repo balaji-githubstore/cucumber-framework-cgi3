@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import com.cgi.base.AutomationHooks;
+import com.cgi.pages.MainPage;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -19,7 +20,7 @@ public class EmergencyContactsSteps {
 	@When("I click on My Info")
 	public void i_click_on_my_info() {
 
-		AutomationHooks.driver.findElement(By.id("menu_pim_viewMyDetails")).click();
+		MainPage.clickOnMyInfo();
 	}
 
 	@When("I click on Emergency Contact")
