@@ -16,5 +16,8 @@ public class MainPage {
 	{
 		return AutomationHooks.driver.findElement(myInfoLocator).getText();
 	}
+	
+	//clickOnPIM()
+	//clickOnAddEmployee()
 
 }

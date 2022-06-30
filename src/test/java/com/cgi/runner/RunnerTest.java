@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		, glue = {"com.cgi.steps","com.cgi.base" }
 		, monochrome = true
 		, publish = false
-		, plugin = {"html:target/cucumber-report.html"}
+		, plugin = {"html:target/cucumber-report.html","progress","json:target/cucumber-report.json"}
 		//, tags = "not (@valid or @invalid)"
 		, tags="@employee"
 	    //, dryRun = true

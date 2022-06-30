@@ -13,7 +13,7 @@ Feature: Employee
     And I click on Add Employee
     And I fill the employee details
       | firstname | middelname | lastname | employee_id | emp_image                            | check_create_credential | username | password    | confirm_password | status   |
-      | john      | k          | ken      |      101454 | src/test/resources/Files/emp_101.PNG | true                    | john1267 | Welcome@123 | Welcome@123      | Disabled |
+      | john      | k          | ken      |      1014543 | src/test/resources/Files/emp_101.PNG | true                    | john1267 | Welcome@123 | Welcome@123      | Disabled |
     And I click on save employee record
     Then I should get the added employee record under personal details
 

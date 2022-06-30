@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 import com.cgi.base.AutomationHooks;
+import com.cgi.pages.AddEmployeePage;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -46,7 +47,7 @@ public class EmployeeSteps {
 		String confirmPassword=list.get(0).get("confirm_password");
 		String status=list.get(0).get("status");
 
-		AutomationHooks.driver.findElement(By.id("firstName")).sendKeys(firstName);
+		AddEmployeePage.enterFirstName(firstName);
 		AutomationHooks.driver.findElement(By.id("middleName")).sendKeys(middleName);
 		AutomationHooks.driver.findElement(By.id("lastName")).sendKeys(lastName);
 		AutomationHooks.driver.findElement(By.id("employeeId")).clear();
@@ -66,7 +67,11 @@ public class EmployeeSteps {
 		//check if true
 		if(checkCreateCredential.equalsIgnoreCase("true"))
 		{
-			AutomationHooks.driver.findElement(By.id("chkLogin")).click();
+			AddEmployeePage.checkCreateLoginDetail();
+		}
+		else
+		{
+			AddEmployeePage.unCheckCreateLoginDetail();
 		}
 		
 		AutomationHooks.driver.findElement(By.id("user_name")).sendKeys(username);
