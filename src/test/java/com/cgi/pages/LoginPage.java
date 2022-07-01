@@ -2,8 +2,10 @@ package com.cgi.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import com.cgi.base.WebDriverKeywords;
 	
-public class LoginPage {
+public class LoginPage extends WebDriverKeywords {
 	private By usernameLocator = By.id("txtUsername");
 	private By passwordLocator = By.cssSelector("#txtPassword");
 	private By loginLocator = By.xpath("//input[@id='btnLogin']");
@@ -14,20 +16,21 @@ public class LoginPage {
 	
 	public LoginPage(WebDriver driver)
 	{
+		super(driver);
 		this.driver=driver;
 	}
 	
 
 	public void enterUsername(String username) {
-		driver.findElement(usernameLocator).sendKeys(username);
+		enterUsingLocator(usernameLocator, username);
 	}
 
 	public void enterPassword(String password) {
-		driver.findElement(passwordLocator).sendKeys(password);
+		enterUsingLocator(passwordLocator, password);
 	}
 
 	public void clickOnLogin() {
-		driver.findElement(loginLocator).click();
+		clickUsingLocator(loginLocator);
 	}
 
 	public void clickOnLinkedinIcon() {
