@@ -26,4 +26,4 @@ Feature: Login
       | username | password |
       | bala     | bala123  |
       | peter    | peter123 |
-      | mark     | mark123  |
+      #| mark     | mark123  |
