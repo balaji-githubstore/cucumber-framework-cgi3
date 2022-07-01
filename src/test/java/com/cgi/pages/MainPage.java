@@ -1,20 +1,29 @@
 package com.cgi.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import com.cgi.base.AutomationHooks;
 
 public class MainPage {
-	private static By myInfoLocator=By.partialLinkText("Info");
+	private By myInfoLocator=By.partialLinkText("Info");
 	
-	public static void clickOnMyInfo()
+	private WebDriver driver;
+	
+	public MainPage(WebDriver driver)
 	{
-		AutomationHooks.driver.findElement(myInfoLocator).click();
+		this.driver=driver;
 	}
 	
-	public static String getMyInfoText()
+	
+	public void clickOnMyInfo()
 	{
-		return AutomationHooks.driver.findElement(myInfoLocator).getText();
+		driver.findElement(myInfoLocator).click();
+	}
+	
+	public String getMyInfoText()
+	{
+		return driver.findElement(myInfoLocator).getText();
 	}
 	
 	//clickOnPIM()

@@ -1,21 +1,24 @@
 package com.cgi.pages;
 
 import org.openqa.selenium.By;
-
-import com.cgi.base.AutomationHooks;
+import org.openqa.selenium.WebDriver;
 
 public class MyInfoPage {
-	private static By personalDetailLocator=By.linkText("Personal Details");
-	private static By emergencyContactLocator=By.linkText("Emergency Contacts");
-	
-	public static void clickOnPersonlDetails()
-	{
-		AutomationHooks.driver.findElement(personalDetailLocator).click();
+	private By personalDetailLocator = By.linkText("Personal Details");
+	private By emergencyContactLocator = By.linkText("Emergency Contacts");
+
+	private WebDriver driver;
+
+	public MyInfoPage(WebDriver driver) {
+		this.driver = driver;
 	}
 
-	public static void clickOnEmergencyContact()
-	{
-		AutomationHooks.driver.findElement(emergencyContactLocator).click();
+	public void clickOnPersonlDetails() {
+		driver.findElement(personalDetailLocator).click();
+	}
+
+	public void clickOnEmergencyContact() {
+		driver.findElement(emergencyContactLocator).click();
 	}
 
 }

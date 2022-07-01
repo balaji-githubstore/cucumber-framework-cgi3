@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 		, plugin = {"html:target/cucumber-report.html","rerun:target/rerun.txt"}
 		//, plugin = {"html:target/cucumber-report.html","progress","json:target/cucumber-report.json"}
 		//, tags = "not (@valid or @invalid)"
-		, tags="@login"
+		, tags="@invalid"
 	    //, dryRun = true
 				
 		)

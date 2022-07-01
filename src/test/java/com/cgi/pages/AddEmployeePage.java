@@ -1,31 +1,39 @@
 package com.cgi.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
-import com.cgi.base.AutomationHooks;
 
 public class AddEmployeePage {
-	private static By firstnameLocator = By.id("firstName");
-	private static By createLoginLocator=By.id("chkLogin");
+	private By firstnameLocator = By.id("firstName");
+	private By createLoginLocator=By.id("chkLogin");
 	
-	public static void enterFirstName(String firstname)
+	private WebDriver driver;
+	
+	public AddEmployeePage(WebDriver driver)
 	{
-		AutomationHooks.driver.findElement(firstnameLocator).sendKeys(firstname);
+		this.driver=driver;
 	}
 	
-	public static void checkCreateLoginDetail()
+	
+	public void enterFirstName(String firstname)
 	{
-		if(!AutomationHooks.driver.findElement(createLoginLocator).isSelected())
+		driver.findElement(firstnameLocator).sendKeys(firstname);
+	}
+	
+	public void checkCreateLoginDetail()
+	{
+		if(!driver.findElement(createLoginLocator).isSelected())
 		{
-			AutomationHooks.driver.findElement(createLoginLocator).click();
+			driver.findElement(createLoginLocator).click();
 		}
 	}
 	
-	public static void unCheckCreateLoginDetail()
+	public void unCheckCreateLoginDetail()
 	{
-		if(AutomationHooks.driver.findElement(createLoginLocator).isSelected())
+		if(driver.findElement(createLoginLocator).isSelected())
 		{
-			AutomationHooks.driver.findElement(createLoginLocator).click();
+			driver.findElement(createLoginLocator).click();
 		}
 	}
 
