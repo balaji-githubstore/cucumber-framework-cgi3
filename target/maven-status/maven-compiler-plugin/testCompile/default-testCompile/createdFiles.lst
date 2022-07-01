@@ -1,0 +1,9 @@
+com\cgi\steps\EmployeeSteps.class
+com\cgi\base\AutomationHooks.class
+com\cgi\steps\EmergencyContactsSteps.class
+com\cgi\runner\RunnerTest.class
+com\cgi\pages\LoginPage.class
+com\cgi\steps\LoginSteps.class
+com\cgi\pages\MyInfoPage.class
+com\cgi\pages\MainPage.class
+com\cgi\pages\AddEmployeePage.class

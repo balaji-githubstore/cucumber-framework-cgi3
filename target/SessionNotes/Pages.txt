@@ -1,0 +1,35 @@
+Page 1 - LoginPage.java 
+	Methods 
+	 	enterUsername(String)
+		enterPassword(String)
+		clickOnLogin()
+		ClickOnForgotPassword()
+		clickOnLinkedinIcon()
+		clickOnFacebookIcon()
+
+
+Page 2 - ResetPasswordPage.java
+	Methods
+		enterResetUsername(String)
+		clickResetPassword()
+		clickCancel()
+
+Page 3 - MainPage.java
+	Methods - handle all menu 
+	clickOnAdmin()
+	clickOnPIM()
+	clickOnMyInfo()
+	clickOnAddEmployee()
+
+Page 4- MyInfo.java
+	Methods 
+	clickOnPersonalDetails()
+	clickOnContactDetails()
+	clickOnEmergencyContacts()
+
+Page 5 - PersonalDetails.java
+
+Page 6 - EmergencyContact.java
+	clickOnAddEmergencyContact()
+	enterContactName(String)
+	enterRelationship(String)

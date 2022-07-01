@@ -1,0 +1,26 @@
+
+Relative xpath:- 
+
+//tagname[@att='']
+//tagname[text()='']
+
+//tagname[contains(@att,'')]
+//tagname[contains(text(),'')]
+
+
+----
+And - or 
+following - preceding 
+parent-child 
+ancestor - descendant 
+
+Example:
+//table[@id='emgcontact_list']
+
+//input[@type='file']
+
+
+
+
+
+following sbiling 
