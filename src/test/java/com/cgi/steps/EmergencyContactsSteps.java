@@ -4,9 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 
-import com.cgi.base.AutomationHooks;
 import com.cgi.pages.EmergencyContactPage;
 import com.cgi.pages.MainPage;
 import com.cgi.pages.MyInfoPage;
@@ -40,7 +38,7 @@ public class EmergencyContactsSteps {
 		emergencyContact_dt=dataTable;
 		List<Map<String, String>> list = dataTable.asMaps();
 		System.out.println(list);
-
+	
 //		System.out.println(list.get(0).get("contactname"));
 //		System.out.println(list.get(0).get("relationship"));
 
