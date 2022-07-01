@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Orange HRM Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Emergency Contact Test(failed)">
+    <classes>
+      <class name="com.cgi.runner2.RunnerTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.cgi.runner2.RunnerTest -->
+    </classes>
+  </test> <!-- Emergency Contact Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Login Test(failed)">
+    <classes>
+      <class name="com.cgi.runner.RunnerTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 2"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.cgi.runner.RunnerTest -->
+    </classes>
+  </test> <!-- Login Test(failed) -->
+</suite> <!-- Failed suite [Orange HRM Suite] -->

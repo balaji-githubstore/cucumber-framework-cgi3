@@ -16,7 +16,7 @@ Feature: Login
     Then I should get access to the portal with page content as 'My Info'
 
   @invalid
-  Scenario Outline: Invalid Credential1
+  Scenario Outline: Invalid Credential
     When I enter username as '<username>'
     And I enter password as '<password>'
     And I click on login

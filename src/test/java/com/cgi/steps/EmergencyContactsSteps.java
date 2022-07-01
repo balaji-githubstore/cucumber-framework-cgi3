@@ -3,8 +3,9 @@ package com.cgi.steps;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import com.cgi.base.AutomationHooks;
 import com.cgi.pages.MainPage;
@@ -72,7 +73,7 @@ public class EmergencyContactsSteps {
 	
 		Assert.assertTrue(actualValue.contains(cName)); //it should be true
 		Assert.assertTrue(actualValue.contains(list.get(0).get("relationship")));
-		Assert.assertTrue("Assertion on home telephone name",actualValue.contains(list.get(0).get("hometelephone")));
+		Assert.assertTrue(actualValue.contains(list.get(0).get("hometelephone")),"Assertion on home telephone name");
 	}
 
 }

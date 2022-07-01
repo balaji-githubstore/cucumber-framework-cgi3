@@ -2,8 +2,8 @@ package com.cgi.steps;
 
 import java.time.Duration;
 
-import org.junit.Assert;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import com.cgi.base.AutomationHooks;
 import com.cgi.pages.LoginPage;
@@ -54,7 +54,7 @@ public class LoginSteps {
 	public void i_should_get_the_error_message_as(String expectedError) {
 
 		String actualError = LoginPage.getLoginErrorMessage();
-		Assert.assertEquals(expectedError, actualError);
+		Assert.assertEquals( actualError,expectedError);
 	}
 
 }

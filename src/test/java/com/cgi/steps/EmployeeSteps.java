@@ -4,9 +4,10 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.cgi.base.AutomationHooks;
 import com.cgi.pages.AddEmployeePage;
@@ -107,8 +108,8 @@ public class EmployeeSteps {
 		String actualFirstName=AutomationHooks.driver.findElement(By.id("personal_txtEmpFirstName")).getAttribute("value");
 		String actualEmployeeId=AutomationHooks.driver.findElement(By.id("personal_txtEmployeeId")).getAttribute("value");
 		
-		Assert.assertEquals(firstName, actualFirstName);
-		Assert.assertEquals(employee_id, actualEmployeeId);
+		Assert.assertEquals( actualFirstName,firstName);
+		Assert.assertEquals(actualEmployeeId,employee_id);
 	}
 
 }
