@@ -4,6 +4,7 @@ Feature: Employee
   As an Admin
   I would like create, edit, delete employee records
 
+	@high
   Scenario: Add Employee
     Given I have browser with orangehrm application
     When I enter username as 'Admin'

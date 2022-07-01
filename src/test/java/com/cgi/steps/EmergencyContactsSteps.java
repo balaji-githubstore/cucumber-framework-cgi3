@@ -7,7 +7,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import com.cgi.base.AutomationHooks;
+import com.cgi.pages.EmergencyContactPage;
 import com.cgi.pages.MainPage;
+import com.cgi.pages.MyInfoPage;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -19,18 +21,17 @@ public class EmergencyContactsSteps {
 
 	@When("I click on My Info")
 	public void i_click_on_my_info() {
-
 		MainPage.clickOnMyInfo();
 	}
 
 	@When("I click on Emergency Contact")
 	public void i_click_on_emergency_contact() {
-		AutomationHooks.driver.findElement(By.linkText("Emergency Contacts")).click();
+		MyInfoPage.clickOnEmergencyContact();
 	}
 
 	@When("I click on add emergency contact")
 	public void i_click_on_add_emergency_contact() {
-		AutomationHooks.driver.findElement(By.id("btnAddContact")).click();
+		EmergencyContactPage.clickOnAddEmergencyContact();
 	}
 
 	@When("I fill the form")
@@ -46,18 +47,17 @@ public class EmergencyContactsSteps {
 		String contactName = list.get(0).get("contactname");
 		String relationship = list.get(0).get("relationship");
 
-		AutomationHooks.driver.findElement(By.id("emgcontacts_name")).sendKeys(contactName);
-		AutomationHooks.driver.findElement(By.id("emgcontacts_relationship")).sendKeys(relationship);
-		AutomationHooks.driver.findElement(By.name("emgcontacts[homePhone]")).sendKeys(list.get(0).get("hometelephone"));
-		AutomationHooks.driver.findElement(By.name("emgcontacts[mobilePhone]")).sendKeys(list.get(0).get("mobile"));
-		AutomationHooks.driver.findElement(By.name("emgcontacts[workPhone]")).sendKeys(list.get(0).get("worktelephone"));
-		// fill mobile
-		// fill worktelephone
+		EmergencyContactPage.enterContactName(contactName);
+		EmergencyContactPage.enterRelationship(relationship);
+		EmergencyContactPage.enterHomeTelephone(list.get(0).get("hometelephone"));
+		EmergencyContactPage.enterMobile(list.get(0).get("mobile"));
+		EmergencyContactPage.enterWorkTelephone(list.get(0).get("worktelephone"));
+
 	}
 
 	@When("I click on save")
 	public void i_click_on_save() {
-		AutomationHooks.driver.findElement(By.id("btnSaveEContact")).click();
+		EmergencyContactPage.saveEmergencyContact();
 	}
 
 	@Then("I should get the added recorded")
@@ -68,7 +68,7 @@ public class EmergencyContactsSteps {
 		String cName=list.get(0).get("contactname");
 
 		//actual table record in webpage
-		String actualValue=AutomationHooks.driver.findElement(By.xpath("//table[@id='emgcontact_list']")).getText();
+		String actualValue=EmergencyContactPage.getTableRecords();
 	
 		Assert.assertTrue(actualValue.contains(cName)); //it should be true
 		Assert.assertTrue(actualValue.contains(list.get(0).get("relationship")));
